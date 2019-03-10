@@ -1,0 +1,16 @@
+extends ./layout
+
+block contenido
+	h1 Comentarios
+	
+	div
+		each val in objeto
+			div.
+				#[h2 #{val.nombre}] 
+				#[p #{val.texto}] 
+	form(action="/registra" method="POST")
+		input(id="nombre" type="text" name="nombre")
+		br
+		input(id="texto" type="text" name="texto")
+		br
+		button(id="aceptar") ingresar
