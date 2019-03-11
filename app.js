@@ -10,6 +10,7 @@ const PORT = 8000
 
 app.set("view engine","jade")
 
+app.use("/public", express.static(__dirname + '/public'));
 app.use(routes)
 
 app.listen(PORT,()=>{console.log("Inicia puerto "+PORT)})

@@ -1,16 +1,21 @@
 extends ./layout
-
+block otros_style
+	link(rel='stylesheet', href='../public/css/index.css')
+	
 block contenido
-	h1 Comentarios
+	h1(id="titulo") Comentarios
 	div(class='row')
 		each val in objeto
-			div(class="col-xl-12")
-				h2(class="label label-default") #{val.nombre} 
-				p #{val.texto} 
+			div(class="col-xl-12 bloque")
+				div(class="bg-primary container p-2 h2")
+					h2(class="text-white") #{val.nombre}
+				div(class="bg-light text-dark p-2 texto") 
+					p #{val.texto} 
 	form(action="/registra" method="POST")
 		div(class="form-group")
+			label Usuario 
 			input(id="nombre" type="text" name="nombre" class="form-control")
 			br
-			input(id="texto" type="text" name="texto" class="form-control")
+			textarea(id="texto" type="text" name="texto" class="form-control" rows="7")
 			br
 			button(id="aceptar" class="btn-primary" type="submit") cargar

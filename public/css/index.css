@@ -1,0 +1,26 @@
+body{
+	background-color: #5882FA;
+}
+
+.h2{
+	border-radius: 20px 20px 0px 0px;
+}
+
+.texto{
+	border-radius: 0px 0px 20px 20px;
+}
+
+.contenido{
+	background-color: #ddd;
+	height: 100%;
+}
+
+.bloque{
+	margin-bottom: 40px;
+}
+
+#titulo{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
