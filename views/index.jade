@@ -2,16 +2,15 @@ extends ./layout
 
 block contenido
 	h1 Comentarios
-	
 	div(class='row')
 		each val in objeto
-			div(class="col-xl-12").
-				#[h2 #{val.nombre}] 
-				#[p #{val.texto}] 
+			div(class="col-xl-12")
+				h2(class="label label-default") #{val.nombre} 
+				p #{val.texto} 
 	form(action="/registra" method="POST")
 		div(class="form-group")
 			input(id="nombre" type="text" name="nombre" class="form-control")
 			br
 			input(id="texto" type="text" name="texto" class="form-control")
 			br
-			button(id="aceptar" class="btn-default" type="submit") cargar
+			button(id="aceptar" class="btn-primary" type="submit") cargar
